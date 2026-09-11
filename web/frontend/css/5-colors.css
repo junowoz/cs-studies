@@ -1,0 +1,47 @@
+/* We can have colors in many ways: Named, Hexa, RGB and HSL.
+
+- Foreground Color: The color of the element:
+    color: red;
+
+- Background Color:
+    background-color: blue;
+
+- Hex (Hexadecimal):
+    darkseagreen: #8FBC8F 
+    sienna: #A0522D 
+    saddlebrown: #8B4513 
+    brown: #A52A2A 
+    black: #000000 or #000 
+    white: #FFFFFF or #FFF 
+    aqua: #00FFFF or #0FF
+
+- RGB Colors (0 to 255) [red, green, blue]:
+    .green {
+        background-color: rgb(143, 188, 143);
+    }
+
+[RGB and Hex can represent a lot of colors]
+
+- HSL (Hue, Saturation, and Lightness) [0 and 360]:
+Hue is the first number (angle on a color wheel).
+Saturation refers to the intensity or purity of the color.
+Lightness refers to how light or dark the color is.
+
+    body {
+        background-color: hsl(60, 100%, 80%);
+    }
+
+- Opacity and Alpha: the 'a' is alpha (Opacity, 0 to 1)
+If alpha 'a', is 0 = transparent.
+
+    body {
+        background-color: hsla(60, 100%, 80%, 0.33);
+        background-color: rgba(60, 234%, 123, 0.5);
+        background-color: #11111100; The last 2 digits in 0 = transparency
+        background-color: #111111FF; The last 2 digits in FF = opacity
+        background-color: transparent;
+    }
+
+ */
+
+ 

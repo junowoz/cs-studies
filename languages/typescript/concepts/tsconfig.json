@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "commonjs",
+        "strictNullChecks": true
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}
+
+/*
+"compilerOptions", which is a nested object that contains the rules for the TypeScript compiler to enforce.
+"target", the value "es2017" means the project will be using the 2017 version of EcmaScript standards for JavaScript.
+"module", this project will be using "commonjs" syntax to import and export modules.
+"strictNullChecks", variables can only have null or undefined values if they are explicitly assigned those values.
+"include" that determines what files the compiler applies the rules to.
+*/

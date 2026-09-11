@@ -1,0 +1,159 @@
+-------------------------------------------------------------------------------------------------
+
+1 - MER [Modelo de Entidade Relacional]
+2 - SQL ANSI: Criar e modelar bases de dados.
+
+[BANCOS DE DADOS RELACIONAIS]
+    Bancos de Dados são mecanismos de armazenamento de dados. Conjunto de informação
+    com estrutura regular.
+
+    Tabelas: Forma de organização de dados formada por linhas e colunas.
+
+    Conlunas: Campos que formam um registro.
+
+    Linhas: Registros ou tuplas.
+
+    Visões: Consultas SQL a dados ds tabelas do banco sem armazená-los.
+
+    Índices: Estruturas que gerenciam a ordenação de valores dos Campos informados
+    para melhorar a performance de processamento destes campos.
+
+    SGBD - SISTEMA GERENCIADOR DE BANCO DE DADOS
+    Não é um banco de dados, mas sim um complemento. É um grupo de programas para interação com os dados.
+    Banco de Dados <-> SGBD [SISTEMA, USUÁRIO]
+
+    DBMS: Database Management Systern
+
+-------------------------------------------------------------------------------------------------
+
+[INTRODUÇÃO AO SQL]
+    - SQL (Structured Query Language). Linguagem Estruturada de Consulta
+    - Formada pelo conjunto das linguagens:
+        -DDL (Data Definition Language): Linguagem de Definição de Dados
+        -DML (Data Manipulation Language): Linguagem de Manipulação de Dados
+        -DQL (Data Query Language): Linguagem de Consulta de Dados
+        -DCL (Data Control Language): Linguagem de Controle de Dados
+        -DTL (Data Transaction Language): Linguagem de Transação de Dados
+
+    [DDL] LINGUAGEM DE DEFINIÇÃO DE DADOS 
+        -CREATE: Cria uma estrutura
+        -ALTER: Altera uma estrutura
+        -DROP: Exclui uma estrutura
+
+    [DML] LINGUAGEM DE MANIPULAÇÃO DE DADOS
+        -INSERT: Insere dados
+        -UPDATE: Altera dados
+        -DELETE: Exclui dados
+
+    [DQL] LINGUAGEM DE CONSULTA DE DADOS
+        -SELECT: Retorna dados
+        -Ordenação de dados
+        -Agrupamento de dados
+        -Funções aritméticas
+        -Filtros de seleção
+
+    [DCL] LINGUANGEM DE CONTROLE DE DADOS
+        -GRANT: Habilita acesso a dados e operações
+        -REVOKE: Revoga acesso a dados e operações
+
+    [DTL] LINGUAGEM DE TRANSAÇÃO DE DADOS
+        -START TRANSACTION: Inicia a transação
+        -COMMIT: Concretiza a transação
+        -ROLLBACK: Anula a transação
+
+-------------------------------------------------------------------------------------------------
+
+[RELACIONAMENTOS]
+    -Relacionamentos: Ligações entre tabelas.
+    -Chave Primária (Primary Key, PK): Coluna com valores únicos.
+    -Chave Composta: Composição de duas ou mals colunas para gerar uma combinação única.
+    -Chave Estrangeira (Foreign Key, FK):Coluna que armazena a chave primárla de outra tabela.
+
+
+
+[TIPOS DE RELACIONAMENTOS]
+    -Relacionamento 1 para 1 (1:1)
+        Para cada registro da primelra tabela existe no máximo 
+        um correspondente na segunda tabela, e vice-versa.
+
+    -Relacionamento 1 para muitos (1:*)
+        Para cada registro da primelra tabela pode existir um ou mais
+        correspondentes na segunda tabela, e para cada registro na segunda tabela 
+        existe apenas um registro correspondente na primelra tabela.
+
+    -Relacionamento muitos para muitos (**)
+        Para cada registro da primeira tabela pode existir um ou mais correspondentes 
+        na segunda tabela, e vice-versa.
+
+
+
+[DIAGRAMA DE MODELOS DE DADOS]
+    Um dos padrões de modelagem de dados
+        -Relacionamento 1:1  ->   ||---||
+        -Relacionamento 1:*  ->   ||---|<
+        -Relacionamento **   ->   >|---|<
+
+
+[ANOMALIAS]
+    -Tabelas "fazem tudo" geram anomalias
+    -Anomalia de inserção: 
+        Impede a Inclusão de registros devido à falta de dados.
+
+    -Anomalia de exclusão:
+        Impede a exclusão de registros devido ao relacionamento com outra tabela.
+        
+    -Anomalia de alteração:
+        Impede a alteração de registros devido ao relacionamento com outra tabela.
+
+-------------------------------------------------------------------------------------------------
+[RELACIONAMENTO NO SQL]
+[INNER JOIN]
+    -Informações relacionadas entre si
+    -Em geral entre diferentes tabelas
+    -Geralmente possuem campos em comum
+    -Parâmetro JOIN e suas variacões
+    -Compatibilidade com bancos de dados
+
+    ( SELECT ... FROM T1 JOIN T2 ON T1.FK = T2.PK )
+    ( SELECT .. FROM T1 JOIN T2 USING Chave )
+
+    -Join padrão
+    -Produto cartesiano entre as tabelas
+    -Combina todas as linhas da primeira tabela com todas as linhas da segunda, 
+    que satisfaçam as condições das chaves
+
+    Exemplo: 
+    SELECT * FROM PESSOAS JOIN VEICULOS 
+    ON PESSOAS.CPF = VEICULOS.CPF
+
+
+[EQUI JOIN]
+    -Similar ao Inner join
+    -Chaves de mesmo nome entre as tabelas
+
+    Exemplo:
+    SELECT * FROM PESSOAS JOIN VEICULOS USING (CPF)
+
+
+[OUTER JOIN, LEFT JOIN, LEFT OUTER JOIN]
+    -Linhas que não satisfazem a condição de união
+    -Left: Linhas da primeira tabela cujo campo de condição não satisfaçam a união de tabelas
+
+    Exemplo:
+    SELECT * FROM PESSOAS LEFT JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+
+[RIGHT JOIN, RIGHT OUTER JOIN]
+    -Similar ao Left join
+    -Right: Linhas da segunda tabela cujo campo de condição não satisfaçam a união de tabelas
+
+    Exemplo:
+    SELECT * FROM PESSOAS RIGHT JOIN VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+
+[FULL OUTER JOIN]
+    Exemplo:
+    SELECT * FROM PESSOAS FULL JOIN
+    VEICULOS ON PESSOAS.CPF = VEICULOS.CPF
+
+-------------------------------------------------------------------------------------------------

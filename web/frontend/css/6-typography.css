@@ -1,0 +1,55 @@
+
+- Font Family, and Multi-Word Values
+    h1 {
+        font-family: Arial;
+    }
+
+    - When we want to put many fonts, just use '' - Multi-Word Values
+        h1 {
+            font-family: 'Times New Roman';
+        }
+
+    - Web Safe Fonts: Will use one by one
+        h1 {
+            font-family: Caslon, Georgia, 'Times New Roman';
+        }
+
+    - Serif and Sans-Serif
+        Serif fonts. Serif fonts have extra details on the ends of each letter,
+        as opposed to Sans-Serif fonts, which do not have the extra details.
+        h1 {
+            font-family: Caslon, Georgia, 'Times New Roman', serif;
+        }
+
+- Font Weight
+    bold: Bold font weight. 
+    normal: Normal font weight. This is the default value. 
+    lighter: One font weight lighter than the element’s parent value. 
+    bolder: One font weight bolder than the element’s parent value
+
+    Numerical Values Numerical values can range from 1 (lightest) to 1000 (boldest),
+    but it is common practice to use increments of 100. 
+    A font weight of 400 is equal to the keyword value normal, and a font weight of 700 is equal to bold.
+
+    .left-section {
+        font-weight: 700;
+    }
+
+    .right-section {
+        font-weight: bold;
+    }
+
+- Font Style
+    The italic value causes text to appear in italics. 
+    The font-style property also has a normal value which is the default.
+
+    h3 {
+        font-style: italic;
+    }
+
+- Text Transformation 
+    uppercase or lowercase
+    
+    h1 {
+    text-transform: uppercase;
+    }

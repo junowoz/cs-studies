@@ -1,0 +1,47 @@
+/* everything */
+*{
+
+}
+
+/* id, é algo único */
+#id{
+    color: azure;
+}
+
+/* class, é algo que pode ser usado em vários elementos*/
+.class{
+
+}
+
+/* selecting specific classes
+<h1 class='heading'>
+<p class='heading'> */
+
+.heading {
+
+}
+
+h1.heading {
+
+}
+
+p.heading {
+    /* opacity: 0.4; opacidade */
+
+}
+
+h1, p{
+    color: aqua;
+}
+
+/* margins */
+*{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    /* THIS IS THE SAME */
+
+    margin: 50px 50px 50px 50px;
+}

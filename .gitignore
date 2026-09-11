@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependências
+node_modules/
+env/
+venv/
+.venv/
+
+# Build / cache
+dist/
+build/
+cache/
+artifacts/
+typechain/
+typechain-types/
+__pycache__/
+*.pyc
+*.class
+*.o
+*.out
+*.exe
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Segredos
+.env
+.env.*
+!.env.example
+
+# Banco local
+*.sqlite3
