@@ -5,7 +5,7 @@
 
 // To access node, just type 'node' in the console
 console.log("Hello, World!");
-// Then on the console, type 'node 1_node.js', and node will run your program.
+// Then on the console, type 'node 1-fundamentos.js', and node will run your program.
 
 //Example:
 let noun1 = "man";
@@ -49,7 +49,7 @@ console.assert(petsArray.length > 5);
  * The Process Module
  */
 let initialMemory = process.memoryUsage().heapUsed;
-let word = process.argv[2]; //this inputs the word I choose before typing 'node 1_node.js ' in the terminal
+let word = process.argv[2]; //this inputs the word I choose before typing 'node 1-fundamentos.js ' in the terminal
 
 console.log(`Your word is ${word}`);
 
@@ -68,7 +68,7 @@ console.log(
         process.memoryUsage().heapUsed - initialMemory
     } more bytes of memory.`
 );
-//then run with node 1_node.js
+//then run with node 1-fundamentos.js
 
 /////////////////////////////////////////////////////////////////////////////////////
 /**
