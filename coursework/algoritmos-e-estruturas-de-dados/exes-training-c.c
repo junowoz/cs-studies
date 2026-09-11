@@ -1,6 +1,6 @@
 /**
  * @file Atividade acumulativa
- * @author Juan José Gouvêa
+ * @author Autor
  * @brief Exercicios
  * @date Entrega: 02/03/2022
  * 
